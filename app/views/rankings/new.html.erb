@@ -1,0 +1,10 @@
+<h1>Rankings#new</h1>
+<%= form_with(model: [@artist, @ranking], local: true, class: "ui form" ) do |f| %>
+  <%= f.label :song %>
+  <%= f.select :song_id, @songs.collect { |u| [u.artist, u.id] } %>
+  <br />
+  <%= f.label :role %>
+  <%= f.select :role, ['ta', 'teacher', 'student'] %>
+  <br />
+  <%= f.submit nil, class: "ui green button inverted" %>
+<% end %>

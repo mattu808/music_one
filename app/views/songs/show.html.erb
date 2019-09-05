@@ -1,0 +1,15 @@
+<h1>Songs#show</h1>
+<h1><%= @song.full_name %></h1>
+<hr />
+<h2>Courses</h2>
+<ul>
+  <% @song.courses.each do |course| %>
+    <li>
+      <%= link_to course.name, course %>
+    </li>
+  <% end %>
+</ul>
+<br />
+<br />
+<br />
+<%= link_to 'Delete song', @song, method: :delete, class: "ui red button inverted" %>
